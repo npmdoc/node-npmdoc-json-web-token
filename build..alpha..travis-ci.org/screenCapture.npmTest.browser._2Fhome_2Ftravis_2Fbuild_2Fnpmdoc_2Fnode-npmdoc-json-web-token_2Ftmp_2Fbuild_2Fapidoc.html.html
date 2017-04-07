@@ -1,0 +1,423 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/joaquimserafim/json-web-token">json-web-token (v2.1.3)</a>
+</h1>
+<h4>JSON Web Token (JWT) is a compact token format intended for space constrained environments such as HTTP Authorization headers and URI query parameters.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.json-web-token">module json-web-token</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-web-token.JWTError">
+            function <span class="apidocSignatureSpan">json-web-token.</span>JWTError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-web-token.JWTError.super_">
+            function <span class="apidocSignatureSpan">json-web-token.</span>JWTError.super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-web-token.decode">
+            function <span class="apidocSignatureSpan">json-web-token.</span>decode
+            <span class="apidocSignatureSpan">(key, token, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-web-token.encode">
+            function <span class="apidocSignatureSpan">json-web-token.</span>encode
+            <span class="apidocSignatureSpan">(key, data, algorithm, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-web-token.getAlgorithms">
+            function <span class="apidocSignatureSpan">json-web-token.</span>getAlgorithms
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.json-web-token.JWTError">module json-web-token.JWTError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-web-token.JWTError.JWTError">
+            function <span class="apidocSignatureSpan">json-web-token.</span>JWTError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-web-token.JWTError.super_">
+            function <span class="apidocSignatureSpan">json-web-token.JWTError.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.json-web-token.JWTError.super_">module json-web-token.JWTError.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-web-token.JWTError.super_.super_">
+            function <span class="apidocSignatureSpan">json-web-token.JWTError.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.json-web-token.JWTError.super_.captureStackTrace">
+            function <span class="apidocSignatureSpan">json-web-token.JWTError.super_.</span>captureStackTrace
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">json-web-token.JWTError.super_.</span>stackTraceLimit</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.json-web-token" id="apidoc.module.json-web-token">module json-web-token</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.json-web-token.JWTError" id="apidoc.element.json-web-token.JWTError">
+        function <span class="apidocSignatureSpan">json-web-token.</span>JWTError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function JWTError(message) {
+  Error.call(this)
+  Error.captureStackTrace(this, this.constructor)
+  this.name = this.constructor.name
+  this.message = message
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-web-token.JWTError.super_" id="apidoc.element.json-web-token.JWTError.super_">
+        function <span class="apidocSignatureSpan">json-web-token.</span>JWTError.super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Error() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-web-token.decode" id="apidoc.element.json-web-token.decode">
+        function <span class="apidocSignatureSpan">json-web-token.</span>decode
+        <span class="apidocSignatureSpan">(key, token, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function decode(key, token, cb) {
+  if (paramsAreFalsy(key, token)) {
+    return prcResult('The key and token are mandatory!', null, cb)
+  }
+
+  const parts = token.split('.')
+
+  // check all parts're present
+  if (parts.length !== 3) {
+    return prcResult(
+      'The JWT should consist of three parts!',
+      null,
+      cb
+    )
+  }
+
+  // base64 decode and parse JSON
+  const header = JSONParse(b64url.decode(parts[0]))
+  const payload = JSONParse(b64url.decode(parts[1]))
+
+  // get algorithm hash and type and check if is valid
+  const algorithm = algorithms[header.alg]
+
+  if (!algorithm) {
+    return prcResult('The algorithm is not supported!', null, cb)
+  }
+
+  // verify the signature
+  const res = verify(
+    algorithm,
+    key,
+    parts.slice(0, 2).join('.'),
+    parts[2]
+  )
+
+  return prcResult(!res &amp;&amp; 'Invalid key!' || null, payload, header, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+jwt.encode(secret, payload, function (err, token) {
+if (err) {
+  console.error(err.name, err.message);
+} else {
+  console.log(token);
+
+  // decode
+  jwt.<span class="apidocCodeKeywordSpan">decode</span>(secret, token, function (err_, decodedPayload, decodedHeader) {
+    if (err) {
+      console.error(err.name, err.message);
+    } else {
+      console.log(decodedPayload, decodedHeader);
+    }
+  });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-web-token.encode" id="apidoc.element.json-web-token.encode">
+        function <span class="apidocSignatureSpan">json-web-token.</span>encode
+        <span class="apidocSignatureSpan">(key, data, algorithm, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function encode(key, data, algorithm, cb) {
+  if (paramIsValid(algorithm, 'function')) {
+    cb = algorithm
+    algorithm = 'HS256'
+  }
+
+  var defaultHeader = {typ: 'JWT', alg: algorithm}
+
+  var payload = isObject(data) &amp;&amp; data.payload ?
+    data.payload :
+    data
+
+  var header = isObject(data) &amp;&amp; data.header ?
+    extend(data.header, defaultHeader) :
+    defaultHeader
+
+  const validationError = encodeValidations(key, payload, algorithm)
+
+  if (validationError) {
+    return prcResult(validationError, null, cb)
+  }
+
+  const parts = b64url.encode(JSON.stringify(header)) +
+    '.' +
+    b64url.encode(JSON.stringify(payload))
+
+  return prcResult(
+    null,
+    parts + '.' + sign(algorithms[algorithm], key, parts),
+    cb
+  )
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+"status": "SUCCESS"
+  }
+};
+
+var secret = 'TOPSECRETTTTT';
+
+// encode
+jwt.<span class="apidocCodeKeywordSpan">encode</span>(secret, payload, function (err, token) {
+  if (err) {
+console.error(err.name, err.message);
+  } else {
+console.log(token);
+
+// decode
+jwt.decode(secret, token, function (err_, decodedPayload, decodedHeader) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-web-token.getAlgorithms" id="apidoc.element.json-web-token.getAlgorithms">
+        function <span class="apidocSignatureSpan">json-web-token.</span>getAlgorithms
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getAlgorithms() {
+  return Object.keys(algorithms)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.json-web-token.JWTError" id="apidoc.module.json-web-token.JWTError">module json-web-token.JWTError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.json-web-token.JWTError.JWTError" id="apidoc.element.json-web-token.JWTError.JWTError">
+        function <span class="apidocSignatureSpan">json-web-token.</span>JWTError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function JWTError(message) {
+  Error.call(this)
+  Error.captureStackTrace(this, this.constructor)
+  this.name = this.constructor.name
+  this.message = message
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-web-token.JWTError.super_" id="apidoc.element.json-web-token.JWTError.super_">
+        function <span class="apidocSignatureSpan">json-web-token.JWTError.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Error() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.json-web-token.JWTError.super_" id="apidoc.module.json-web-token.JWTError.super_">module json-web-token.JWTError.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.json-web-token.JWTError.super_.super_" id="apidoc.element.json-web-token.JWTError.super_.super_">
+        function <span class="apidocSignatureSpan">json-web-token.JWTError.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Error() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.json-web-token.JWTError.super_.captureStackTrace" id="apidoc.element.json-web-token.JWTError.super_.captureStackTrace">
+        function <span class="apidocSignatureSpan">json-web-token.JWTError.super_.</span>captureStackTrace
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function captureStackTrace() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+//
+// JWT token error
+//
+
+function JWTError (message) {
+  Error.call(this)
+  Error.<span class="apidocCodeKeywordSpan">captureStackTrace</span>(this, this.constructor)
+  this.name = this.constructor.name
+  this.message = message
+}
+
+inherits(JWTError, Error)
+
+//
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
